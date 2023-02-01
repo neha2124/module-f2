@@ -1,0 +1,67 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#first{
+    position: absolute;
+    top: 100px;
+    left: 80px;
+    text-transform: capitalize;
+    text-decoration: none;
+    font-size: 1.2em;
+    color: antiquewhite;
+}
+.Second-div{
+    position: relative;
+}
+#second{
+    position: absolute;
+    top: 100px;
+    left: 80px;
+    text-transform: capitalize;
+    text-decoration: none;
+    font-size: 1.2em;
+    color: antiquewhite;
+    cursor: pointer;
+}
+.hide{
+    display: none !important;
+}
+.pointer{
+    pointer-events: none;
+}
+#data{
+    height: 177px;
+    width: 255px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+#dice-div{
+    position: relative;
+   
+}
+#game{
+    text-transform: capitalize;
+    position: absolute;
+    top: 8px;
+    color: yellow;
+    left: 103px;
+    line-height: 2;
+}
+.result{
+    text-transform: capitalize;
+    position: absolute;
+    top: 8px;
+    color: yellow;
+    left: 103px;
+    line-height: 2;
+}
+.play{
+    background: aquamarine;
+    padding: 6px 40px;
+    border-radius: 10px; 
+}
+
