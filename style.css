@@ -64,4 +64,24 @@
     padding: 6px 40px;
     border-radius: 10px; 
 }
+.coupon{
+    border: 1px solid black;
+    height: 200px;
+    width: 300px;
+    display: flex;
+    /* text-align: center; */
+    align-items: center;
+    /* justify-content: left; */
+    flex-direction: column;
+    background: antiquewhite;
+}
+.coupon p{
+    font-size: 24px;
+    color: blue;
+    text-transform: capitalize;
+}
+.coupon span {
+    display: block;
+    font-size: 23px;
+}
 

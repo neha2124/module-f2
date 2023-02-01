@@ -1,7 +1,8 @@
 const first = document.getElementById("first")
 const sec = document.querySelector('.sec-img')
 const tri = document.querySelector('#tri-img')
-const four = document.querySelector('.for-img')
+const four = document.querySelector('#for-img')
+const fourthDIv = document.querySelector('.fourth-div')
 const data = document.getElementById("data")
 const dice = document.querySelector('#dice')
 const play = document.querySelector('.play')
@@ -13,14 +14,15 @@ const lose = document.querySelector('.lose')
 const result = document.querySelector('.result')
 const game = document.querySelector('#game')
 let secLink = document.querySelector("#second")
+const final = document.querySelector('.final')
 // export default secLink
 
 let move =0
 
 let userData = () => {
     let userName = localStorage.getItem('user-name')
-    let email = localStorage.getItem('email')
-    if(userName == null && email == null){
+    let name = localStorage.getItem('name')
+    if(userName == null && name == null){
         alert("click on first image")
     
     }else{
@@ -28,7 +30,7 @@ let userData = () => {
     let html = `
     <span> User-Name:  &nbsp; ${userName}</span>
     <br>
-    <span> Email: &nbsp;${email}</sapn
+    <span> Your Name: &nbsp;${name}</sapn
     
     `
     
@@ -100,14 +102,14 @@ let playGame= () =>{
 }
 
 const gameOver = (moves,sum) =>{
-    if(moves == 3 && sum>10 ){
+    if(moves == 3 && sum >=10 ){
         win.innerHTML = 'You Won' 
         game.setAttribute('class','hide')
-        // result.classList.remove('lose')
-        four.removeAttribute('class','pointer')
+       four.removeAttribute('class','pointer')
     }else if (sum < 10){
        lose.innerHTML ='Try again'
        game.setAttribute('class','hide')
+       alert('oops! start gain on first image')
      }
 }
 lose.addEventListener('click',()=>{
@@ -115,14 +117,28 @@ lose.addEventListener('click',()=>{
         game.removeAttribute('class','hide')
         result.setAttribute('class','hide')
         score.innerHTML =""
+        
         move = 0
     }
 })
 four.addEventListener('click' , ()=>{
+    console.log("kkk")
     let div = document.createElement('div')
-    let html =  Math.floor(10000000000 + Math.random() * 90000000000);
+    if(div.innerHTML != null){
+        four.classList.add('pointer')
+    }
+    four.innerHTML = ""
+    let num = Math.floor(10000000000 + Math.random() * 90000000000)
+    let html =  ` <p>Congratultion Your Coupon is</p> 
+                <span> ${num}</span>   `;
+
     div.innerHTML = html
+    
+    div.classList.add('coupon')
+    final.append(div)
+  
 })
+
    
 
 
